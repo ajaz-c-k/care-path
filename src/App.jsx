@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Chatbot from './components/Chatbot';
 import Home from './pages/Home';
 import HospitalSearch from './pages/HospitalSearch';
 import CostComparison from './pages/CostComparison';
@@ -28,6 +29,7 @@ function App() {
             &copy; {new Date().getFullYear()} CureRoute. All rights reserved. Professional Medical Travel.
           </div>
         </footer>
+        <Chatbot />
       </div>
     </Router>
   );
