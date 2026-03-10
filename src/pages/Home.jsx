@@ -1,20 +1,19 @@
 import React from 'react';
 import { ArrowRight, Activity, ShieldCheck, HeartPulse } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import './Home.css';
 
 const Home = () => {
     return (
-        <div className="home-container">
+        <div className="flex flex-col gap-16 py-8">
             {/* Hero Section */}
-            <section className="hero-section">
-                <h1 className="hero-title">
-                    Your Trusted Partner in <span className="hero-title-highlight">Medical Travel</span>
+            <section className="text-center max-w-4xl mx-auto px-4">
+                <h1 className="text-4xl md:text-6xl font-bold text-text-main leading-tight mb-6 tracking-tight">
+                    Your Trusted Partner in <span className="text-primary">Medical Travel</span>
                 </h1>
-                <p className="hero-subtitle">
+                <p className="text-lg text-text-muted mb-8 max-w-2xl mx-auto leading-relaxed">
                     CureRoute simplifies your healthcare journey. Find top-rated hospitals, compare transparent treatment costs, and plan your entire recovery process with our AI consultant.
                 </p>
-                <div className="hero-actions">
+                <div className="flex justify-center gap-4 flex-wrap">
                     <Link to="/search" className="btn btn-primary">
                         <span>Find a Hospital</span>
                         <ArrowRight size={18} />
@@ -26,29 +25,29 @@ const Home = () => {
             </section>
 
             {/* Features Section */}
-            <section className="features-section">
-                <div className="card feature-card">
-                    <div className="feature-icon-wrapper">
+            <section className="grid gap-8 py-12 md:grid-cols-3">
+                <div className="card text-center flex flex-col items-center p-8">
+                    <div className="bg-primary-light p-4 rounded-full mb-6 text-primary flex items-center justify-center">
                         <Activity size={32} />
                     </div>
-                    <h3 className="feature-title">Smart Discovery</h3>
-                    <p className="feature-desc">Find vetted hospitals by expertise, success rates, and real patient reviews.</p>
+                    <h3 className="text-xl font-semibold mb-3 text-text-main">Smart Discovery</h3>
+                    <p className="text-text-muted leading-relaxed">Find vetted hospitals by expertise, success rates, and real patient reviews.</p>
                 </div>
 
-                <div className="card feature-card">
-                    <div className="feature-icon-wrapper">
+                <div className="card text-center flex flex-col items-center p-8">
+                    <div className="bg-primary-light p-4 rounded-full mb-6 text-primary flex items-center justify-center">
                         <ShieldCheck size={32} />
                     </div>
-                    <h3 className="feature-title">Transparent Pricing</h3>
-                    <p className="feature-desc">Compare verified treatment costs across top facilities with zero hidden fees.</p>
+                    <h3 className="text-xl font-semibold mb-3 text-text-main">Transparent Pricing</h3>
+                    <p className="text-text-muted leading-relaxed">Compare verified treatment costs across top facilities with zero hidden fees.</p>
                 </div>
 
-                <div className="card feature-card">
-                    <div className="feature-icon-wrapper">
+                <div className="card text-center flex flex-col items-center p-8">
+                    <div className="bg-primary-light p-4 rounded-full mb-6 text-primary flex items-center justify-center">
                         <HeartPulse size={32} />
                     </div>
-                    <h3 className="feature-title">End-to-End Support</h3>
-                    <p className="feature-desc">From AI planning to local guides, we ensure a seamless recovery journey.</p>
+                    <h3 className="text-xl font-semibold mb-3 text-text-main">End-to-End Support</h3>
+                    <p className="text-text-muted leading-relaxed">From AI planning to local guides, we ensure a seamless recovery journey.</p>
                 </div>
             </section>
         </div>
