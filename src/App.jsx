@@ -18,6 +18,9 @@ function App() {
             <Route path="/search" element={<HospitalSearch />} />
             <Route path="/compare" element={<CostComparison />} />
             <Route path="/planner" element={<AIPlanner />} />
+            <Route path="/hospitals" element={<div className="py-12 text-center text-2xl font-bold">Hospital Discovery coming soon...</div>} />
+            <Route path="/dashboard" element={<div className="py-12 text-center text-2xl font-bold">User Dashboard coming soon...</div>} />
+            <Route path="/login" element={<div className="py-12 text-center text-2xl font-bold">Login & Signup coming soon...</div>} />
           </Routes>
         </main>
         <footer className="footer">

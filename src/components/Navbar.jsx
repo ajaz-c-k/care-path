@@ -1,14 +1,26 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Stethoscope, Search, Calculator, Sparkles, UserCircle } from 'lucide-react';
+import { 
+    Stethoscope, 
+    Home, 
+    Search, 
+    Building2, 
+    Sparkles, 
+    Calculator, 
+    LayoutDashboard, 
+    UserCircle 
+} from 'lucide-react';
 
 const Navbar = () => {
     const location = useLocation();
 
     const navLinks = [
-        { name: 'Find Hospital', path: '/search', icon: Search },
-        { name: 'Compare Costs', path: '/compare', icon: Calculator },
+        { name: 'Home', path: '/', icon: Home },
+        { name: 'Find Treatment', path: '/search', icon: Search },
+        { name: 'Hospitals', path: '/hospitals', icon: Building2 },
         { name: 'AI Planner', path: '/planner', icon: Sparkles },
+        { name: 'Cost Estimator', path: '/compare', icon: Calculator },
+        { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
     ];
 
     return (
@@ -20,7 +32,7 @@ const Navbar = () => {
                         <span>CureRoute</span>
                     </Link>
 
-                    <div className="hidden md:flex gap-8">
+                    <div className="hidden lg:flex gap-6">
                         {navLinks.map((link) => {
                             const Icon = link.icon;
                             const isActive = location.pathname === link.path;
@@ -42,7 +54,7 @@ const Navbar = () => {
                     <div className="flex items-center gap-4">
                         <button className="flex items-center gap-2 text-sm font-medium text-text-muted bg-transparent border-none cursor-pointer transition-colors duration-200 hover:text-primary">
                             <UserCircle size={20} />
-                            <span>Login</span>
+                            <span>Login / Sign Up</span>
                         </button>
                     </div>
                 </div>
